@@ -1,0 +1,997 @@
+
+/* =========================
+   ABDULFATTY AUTOS
+   PREMIUM WEBSITE DESIGN
+========================= */
+
+:root {
+    --black: #080808;
+    --dark: #111111;
+    --gold: #c9a34a;
+    --light-gold: #e5c77e;
+    --white: #ffffff;
+    --grey: #999999;
+    --light: #f6f6f6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--white);
+    background: var(--black);
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section-padding {
+    padding: 90px 0;
+}
+
+.eyebrow {
+    display: inline-block;
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+
+/* TOP BAR */
+
+.topbar {
+    background: #050505;
+    border-bottom: 1px solid #222;
+    padding: 12px 0;
+    color: #ccc;
+    font-size: 12px;
+}
+
+.topbar-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.social-links {
+    display: flex;
+    gap: 18px;
+}
+
+.social-links a:hover {
+    color: var(--gold);
+}
+
+/* NAVIGATION */
+
+.header {
+    background: rgba(8, 8, 8, 0.97);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #242424;
+}
+
+.nav-container {
+    min-height: 85px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+}
+
+.logo-main {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 23px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: var(--white);
+}
+
+.logo-sub {
+    color: var(--gold);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 5px;
+    margin-top: 5px;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-menu a {
+    font-size: 13px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-menu a:hover {
+    color: var(--gold);
+}
+
+.nav-menu .nav-whatsapp {
+    background: var(--gold);
+    color: #080808;
+    padding: 13px 18px;
+    border-radius: 3px;
+}
+
+.nav-menu .nav-whatsapp:hover {
+    background: var(--light-gold);
+    color: #000;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 27px;
+    height: 3px;
+    background: var(--gold);
+    margin: 5px;
+    border-radius: 3px;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 620px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background:
+        url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=2000&q=90')
+        center/cover no-repeat;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(0,0,0,0.96) 0%,
+        rgba(0,0,0,0.78) 48%,
+        rgba(0,0,0,0.25) 100%
+    );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 100px 0;
+}
+
+.hero-text {
+    max-width: 700px;
+}
+
+.hero h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(38px, 6vw, 70px);
+    font-weight: 900;
+    line-height: 1.12;
+    margin-bottom: 22px;
+}
+
+.hero h1 span {
+    display: block;
+    color: var(--gold);
+}
+
+.hero h2 {
+    font-size: 19px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    max-width: 530px;
+    color: #d0d0d0;
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 32px;
+}
+
+/* BUTTONS */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 25px;
+    font-size: 13px;
+    font-weight: 800;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+.btn-gold {
+    background: var(--gold);
+    color: #080808;
+}
+
+.btn-gold:hover {
+    background: var(--light-gold);
+    transform: translateY(-3px);
+}
+
+.btn-outline {
+    border: 1px solid var(--gold);
+    color: white;
+}
+
+.btn-outline:hover {
+    background: var(--gold);
+    color: #000;
+}
+
+/* TRUST BAR */
+
+.trust-bar {
+    background: #141414;
+    border-top: 1px solid #292929;
+    border-bottom: 1px solid #292929;
+    padding: 28px 0;
+}
+
+.trust-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.trust-item {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.trust-icon {
+    font-size: 27px;
+}
+
+.trust-item h3 {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.trust-item p {
+    font-size: 11px;
+    color: var(--grey);
+}
+
+/* SECTION HEADINGS */
+
+.section-heading {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 50px;
+}
+
+.section-heading h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(27px, 4vw, 39px);
+    margin-bottom: 15px;
+}
+
+.section-heading p {
+    color: var(--grey);
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* CARS */
+
+.cars-section {
+    background: #0b0b0b;
+}
+
+.cars-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.car-card {
+    background: #151515;
+    border: 1px solid #292929;
+    overflow: hidden;
+    transition: 0.35s;
+}
+
+.car-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--gold);
+}
+
+.car-image {
+    height: 220px;
+    position: relative;
+    overflow: hidden;
+}
+
+.car-image img {
+    height: 100%;
+    transition: 0.5s;
+}
+
+.car-card:hover .car-image img {
+    transform: scale(1.07);
+}
+
+.car-tag {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: var(--gold);
+    color: #000;
+    font-size: 10px;
+    font-weight: 800;
+    padding: 8px 12px;
+}
+
+.car-info {
+    padding: 20px;
+}
+
+.car-info h3 {
+    font-size: 16px;
+    margin-bottom: 9px;
+}
+
+.car-info p {
+    color: var(--grey);
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.car-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding-top: 15px;
+    border-top: 1px solid #303030;
+}
+
+.car-bottom span {
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.car-bottom a {
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.car-bottom a:hover {
+    color: var(--gold);
+}
+
+.center-button {
+    text-align: center;
+    margin-top: 45px;
+}
+
+/* SERVICES */
+
+.services-section {
+    background: #f6f6f6;
+    color: #111;
+}
+
+.services-section .section-heading p {
+    color: #777;
+}
+
+.services-section .eyebrow {
+    color: #a17b2c;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.service-card {
+    padding: 30px 22px;
+    background: white;
+    border: 1px solid #e8e8e8;
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-7px);
+    border-color: var(--gold);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.07);
+}
+
+.service-card > span {
+    font-size: 35px;
+}
+
+.service-card h3 {
+    font-size: 16px;
+    margin: 20px 0 12px;
+}
+
+.service-card p {
+    color: #777;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* WHY TRUST US */
+
+.why-section {
+    background: #111;
+}
+
+.why-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.why-intro h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(30px, 4vw, 43px);
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+.why-intro p {
+    color: #aaa;
+    line-height: 1.9;
+    font-size: 14px;
+    margin-bottom: 28px;
+}
+
+.why-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.why-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+}
+
+.why-item > span {
+    width: 35px;
+    height: 35px;
+    min-width: 35px;
+    display: grid;
+    place-items: center;
+    background: var(--gold);
+    color: #000;
+    font-weight: 900;
+    border-radius: 50%;
+}
+
+.why-item h3 {
+    font-size: 15px;
+    margin-bottom: 6px;
+}
+
+.why-item p {
+    color: #999;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+/* ABOUT */
+
+.about-section {
+    background: #f5f5f5;
+    color: #111;
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 65px;
+}
+
+.about-image {
+    height: 400px;
+    overflow: hidden;
+}
+
+.about-image img {
+    height: 100%;
+    transition: 0.5s;
+}
+
+.about-image:hover img {
+    transform: scale(1.05);
+}
+
+.about-text h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(28px, 4vw, 40px);
+    margin-bottom: 22px;
+}
+
+.about-text p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.9;
+    margin-bottom: 15px;
+}
+
+.about-text .eyebrow {
+    color: #a17b2c;
+}
+
+.about-text .btn {
+    margin-top: 15px;
+}
+
+/* CONTACT */
+
+.contact-section {
+    background:
+        linear-gradient(rgba(0,0,0,0.91), rgba(0,0,0,0.94)),
+        url('https://images.unsplash.com/photo-1485291571150-772bcfc10da5?auto=format&fit=crop&w=1600&q=85')
+        center/cover;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.contact-text h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(30px, 4vw, 45px);
+    margin-bottom: 20px;
+}
+
+.contact-text p {
+    color: #bbb;
+    line-height: 1.8;
+    margin-bottom: 28px;
+    font-size: 14px;
+}
+
+.contact-details {
+    padding: 30px;
+    background: #151515;
+    border: 1px solid #383838;
+}
+
+.contact-details h3 {
+    color: var(--gold);
+    margin-bottom: 25px;
+    font-size: 19px;
+}
+
+.contact-details p {
+    color: #ccc;
+    margin-bottom: 18px;
+    font-size: 13px;
+}
+
+.contact-details a:hover {
+    color: var(--gold);
+}
+
+/* FOOTER */
+
+.footer {
+    background: #050505;
+    padding-top: 65px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr;
+    gap: 50px;
+    padding-bottom: 50px;
+}
+
+.footer-brand p {
+    color: var(--gold);
+    font-size: 13px;
+    margin-top: 20px;
+}
+
+.footer-links,
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.footer h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: var(--gold);
+}
+
+.footer-links a,
+.footer-contact p,
+.footer-contact a {
+    font-size: 13px;
+    color: #aaa;
+}
+
+.footer-links a:hover,
+.footer-contact a:hover {
+    color: var(--gold);
+}
+
+.copyright {
+    text-align: center;
+    padding: 22px 10px;
+    border-top: 1px solid #242424;
+    color: #888;
+    font-size: 12px;
+}
+
+/* WHATSAPP BUTTON */
+
+.floating-whatsapp {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    z-index: 999;
+    width: 55px;
+    height: 55px;
+    display: grid;
+    place-items: center;
+    background: #20c767;
+    color: white;
+    font-size: 27px;
+    border-radius: 50%;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    transition: 0.3s;
+}
+
+.floating-whatsapp:hover {
+    transform: scale(1.1);
+}
+
+/* SCROLL ANIMATIONS */
+
+[data-reveal] {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+[data-reveal].visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* TABLETS */
+
+@media (max-width: 1000px) {
+
+    .nav-menu {
+        gap: 13px;
+    }
+
+    .nav-menu a {
+        font-size: 11px;
+    }
+
+    .cars-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .why-container,
+    .about-container {
+        gap: 35px;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .container {
+        width: 92%;
+    }
+
+    .section-padding {
+        padding: 65px 0;
+    }
+
+    .topbar-content {
+        flex-wrap: wrap;
+        justify-content: center;
+        font-size: 10px;
+    }
+
+    .social-links {
+        display: none;
+    }
+
+    .nav-container {
+        min-height: 72px;
+    }
+
+    .logo-main {
+        font-size: 20px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: 72px;
+        left: 0;
+        width: 100%;
+        background: #101010;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 10px 5% 20px;
+        border-top: 1px solid #292929;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu a {
+        padding: 15px 10px;
+        border-bottom: 1px solid #252525;
+        font-size: 14px;
+    }
+
+    .nav-menu .nav-whatsapp {
+        text-align: center;
+        margin-top: 12px;
+        border: none;
+    }
+
+    .hero {
+        min-height: 560px;
+        background-position: 60% center;
+    }
+
+    .hero-content {
+        padding: 75px 0;
+    }
+
+    .hero h1 {
+        font-size: 39px;
+    }
+
+    .hero h2 {
+        font-size: 16px;
+    }
+
+    .hero p {
+        font-size: 13px;
+    }
+
+    .hero-buttons {
+        gap: 10px;
+    }
+
+    .btn {
+        padding: 14px 17px;
+        font-size: 11px;
+    }
+
+    .trust-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 22px 12px;
+    }
+
+    .trust-item {
+        gap: 9px;
+    }
+
+    .trust-icon {
+        font-size: 23px;
+    }
+
+    .trust-item h3 {
+        font-size: 12px;
+    }
+
+    .trust-item p {
+        font-size: 10px;
+    }
+
+    .section-heading {
+        margin-bottom: 35px;
+    }
+
+    .cars-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .car-image {
+        height: 125px;
+    }
+
+    .car-tag {
+        top: 7px;
+        left: 7px;
+        padding: 5px 7px;
+        font-size: 8px;
+    }
+
+    .car-info {
+        padding: 12px;
+    }
+
+    .car-info h3 {
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+    .car-info p {
+        font-size: 10px;
+        line-height: 1.5;
+        margin-bottom: 13px;
+    }
+
+    .car-bottom {
+        flex-wrap: wrap;
+        gap: 7px;
+    }
+
+    .car-bottom span,
+    .car-bottom a {
+        font-size: 10px;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .service-card {
+        padding: 20px 15px;
+    }
+
+    .service-card > span {
+        font-size: 28px;
+    }
+
+    .service-card h3 {
+        font-size: 13px;
+        margin: 13px 0 8px;
+    }
+
+    .service-card p {
+        font-size: 11px;
+    }
+
+    .why-container,
+    .about-container,
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .why-intro h2 {
+        font-size: 31px;
+    }
+
+    .about-image {
+        height: 260px;
+    }
+
+    .about-text h2 {
+        font-size: 30px;
+    }
+
+    .contact-text h2 {
+        font-size: 31px;
+    }
+
+    .contact-details {
+        padding: 23px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 35px 20px;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+
+    .floating-whatsapp {
+        width: 50px;
+        height: 50px;
+        right: 15px;
+        bottom: 15px;
+    }
+}
+
+/* SMALL PHONES */
+
+@media (max-width: 360px) {
+
+    .hero h1 {
+        font-size: 33px;
+    }
+
+    .cars-grid {
+        gap: 9px;
+    }
+
+    .car-info {
+        padding: 9px;
+    }
+
+    .car-info h3 {
+        font-size: 11px;
+    }
+
+    .car-bottom span,
+    .car-bottom a {
+        font-size: 9px;
+    }
+}
